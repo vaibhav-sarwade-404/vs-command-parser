@@ -1,0 +1,37 @@
+{
+  "name": "@vs-org/command-parser",
+  "version": "0.0.1",
+  "description": "This is simple command parser for command line node applications designed to handle inline argument, inline named argument, user input, user choices.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
+    "build": "rm -rf lib/ && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhav-sarwade-404/vs-command-parser.git"
+  },
+  "keywords": [
+    "command parser",
+    "command line parser",
+    "command line argument parser",
+    "command line arguments parser",
+    "vs command parser",
+    "vs-command-parser"
+  ],
+  "author": "Vaibhav Sarwade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vaibhav-sarwade-404/vs-command-parser/issues"
+  },
+  "homepage": "https://github.com/vaibhav-sarwade-404/vs-command-parser#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  }
+}
