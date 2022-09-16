@@ -133,28 +133,18 @@ class VsCommandParser {
    * parse
    */
   public async parse(): Promise<ParsedArguments | void> {
-    const {
-      options = {},
-      namedOptions = {},
-      userChoiceOptions = {},
-      userInputOptions = {}
-    } = this.commandOptions;
+    const { options = {}, namedOptions = {} } = this.commandOptions;
 
     if (
       !this.useProvidedArguments.length &&
       doesAtleastOneObjectContainsKeyValue(
-        [
-          Object.values(options),
-          Object.values(namedOptions),
-          Object.values(userChoiceOptions),
-          Object.values(userInputOptions)
-        ],
+        [Object.values(options), Object.values(namedOptions)],
         "required",
         true
       )
     ) {
       throw new Error(
-        `Atleast one options is required. Please run command with "help" to get more information about options`
+        `Atleast one inline or named option is required. Please run command with "help" to get more information about options`
       );
     }
 

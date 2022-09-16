@@ -1,6 +1,6 @@
 {
   "name": "@vs-org/command-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is simple command parser for command line node applications designed to handle inline argument, inline named argument, user input, user choices.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only index.ts",
-    "build": "rm -rf lib/ && tsc"
+    "post-build": "node build-utils/post-build-script.js",
+    "build": "rm -rf lib/ && tsc && npm run post-build"
   },
   "repository": {
     "type": "git",
